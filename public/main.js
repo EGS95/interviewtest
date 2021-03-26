@@ -2,7 +2,10 @@ const content = document.getElementById("content");
 
 window.addEventListener("load", (e) => {
   e.preventDefault();
-  fetch("http://localhost:5000/data")
+  //! this used to be http://localhost:5000, it returned the html page.
+  //! This is why it couldn't be parsed as JSON
+  //! The new endpoint returns JSON data
+  fetch("http://localhost:5000/data") 
     .then(res => res.json())
     .then((data) => {
       //console.log(data[0]);

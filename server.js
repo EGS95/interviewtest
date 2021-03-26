@@ -1,11 +1,9 @@
 const express = require('express');
 const fetch = require('node-fetch')
 const path = require('path')
-const cors = require('cors')
 
 const app = express();
 app.use(express.json());
-app.use(cors())
 const port = 5000 || process.env.PORT;
 app.use(express.static(path.join(__dirname,'public')))
 
